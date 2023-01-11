@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --c_dark900: #232227;
+  --c_dark800: #302F34;
+  --c_light900: #C1DEE7D9;
+  --hp: 0%;
+}
+
+
+body {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  // background-color: var(--c_dark900);
+}
+
+#root {
+  display: flex;
+}
+
+.Map, .Table {
+  width: 700px;
+  height: 600px;
+  &_row {
+    cursor: pointer;
+    // &:active {
+    //   background: red;
+    // }
+  }
+}
+
+.leaflet-div-icon {
+  background: transparent;
+  border:none;
+}
