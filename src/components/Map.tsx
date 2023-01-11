@@ -9,15 +9,15 @@ import L from 'leaflet';
 
 const size = [45,59]
 const iconFrom = new L.Icon({
-    iconUrl: (await import('imgs/markerFrom.svg')).default,
-    iconRetinaUrl: (await import('imgs/markerFrom.svg')).default,
+    iconUrl: "/src/assets/imgs/markerFrom.svg",
+    iconRetinaUrl: "/src/assets/imgs/markerFrom.svg",
     iconSize: new L.Point(size[0], size[1]),
     className: 'leaflet-div-icon'
 });
 
 const iconTo = new L.Icon({
-  iconUrl: (await import('imgs/markerTo.svg')).default,
-  iconRetinaUrl: (await import('imgs/markerTo.svg')).default,
+  iconUrl: "/src/assets/imgs/markerTo.svg",
+  iconRetinaUrl: "/src/assets/imgs/markerTo.svg",
   iconSize: new L.Point(size[0], size[1]),
   className: 'leaflet-div-icon'
 });
@@ -54,7 +54,13 @@ function Test() {
 export default function () {
   const state = useAppSelector(getState);
   return (
-    <MapContainer key={Math.random()} className='Map' center={state.from} zoom={13} scrollWheelZoom={false}>
+    <MapContainer 
+      key={Math.random()} 
+      className='Map' 
+      
+      zoom={11} 
+      center={state.from} 
+      scrollWheelZoom={false}>
       <Test/>
     </MapContainer>
   )
