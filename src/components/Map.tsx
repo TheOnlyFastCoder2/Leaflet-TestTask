@@ -1,3 +1,6 @@
+import MarketFrom from 'imgs/markerFrom.svg'
+import MarketTo from 'imgs/markerTo.svg'
+
 import { MapContainer, Marker, Popup, TileLayer, useMap} from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
 
@@ -8,27 +11,25 @@ import { useEffect } from 'react';
 import L from 'leaflet';
 
 const size = [45,59]
+
 const iconFrom = new L.Icon({
-    iconUrl: "/src/assets/imgs/markerFrom.svg",
-    iconRetinaUrl: "/src/assets/imgs/markerFrom.svg",
+    iconUrl: MarketFrom,
+    iconRetinaUrl: MarketFrom,
     iconSize: new L.Point(size[0], size[1]),
     className: 'leaflet-div-icon'
 });
 
 const iconTo = new L.Icon({
-  iconUrl: "/src/assets/imgs/markerTo.svg",
-  iconRetinaUrl: "/src/assets/imgs/markerTo.svg",
+  iconUrl: MarketTo,
+  iconRetinaUrl: MarketTo,
   iconSize: new L.Point(size[0], size[1]),
   className: 'leaflet-div-icon'
 });
 
 
-
-
 function Test() {
   const map = useMap()
   const state = useAppSelector(getState);
-
 
   useEffect(() => {
     map.setView(state.from);
